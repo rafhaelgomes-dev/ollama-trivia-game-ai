@@ -16,7 +16,7 @@ function startGame(theme: string) {
     messages: [
       {
         role: "user",
-        content: `Vamos jogar trivia sobre ${theme}. Gere perguntas e respostas no formato sem adicionais de comentários, apenas traga meu array de objetos com as perguntas, gere apenas 5 perguntas: 
+        content: `Vamos jogar trivia sobre ${theme}. Gere 5 perguntas e respostas no formato sem adicionais de comentários, apenas traga meu array de objetos: 
         [
           {
             pergunta: 
@@ -28,10 +28,14 @@ function startGame(theme: string) {
     stream: false,
   };
 
+  console.log('Gerando perguntas...')
+
   axios
     .post(url, data)
     .then((response) => {
       const questionData = JSON.parse(response.data.message.content);
+
+      console.log('gabarito >>', questionData)
 
       let currentQuestionIndex = 0;
 

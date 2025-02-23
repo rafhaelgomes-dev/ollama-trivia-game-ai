@@ -1,5 +1,5 @@
 {
-  "name": "youtube-transcriber-quiz",
+  "name": "ollama-trivia-game-ai",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
