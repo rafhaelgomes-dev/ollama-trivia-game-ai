@@ -16,7 +16,7 @@ function startGame(theme: string) {
     messages: [
       {
         role: "user",
-        content: `Vamos jogar trivia sobre ${theme}. Gere perguntas e respostas no formato sem adicionais de compentarios, apenas traga meu array de objetos com as perguntas: 
+        content: `Vamos jogar trivia sobre ${theme}. Gere perguntas e respostas no formato sem adicionais de comentários, apenas traga meu array de objetos com as perguntas, gere apenas 5 perguntas: 
         [
           {
             pergunta: 
